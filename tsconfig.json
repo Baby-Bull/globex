@@ -1,35 +1,129 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
     "module": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "allowJs": true,
+    /* Strict Type-Checking Options */
+    "strict": true, /* Enable all strict type-checking options. */
+    "baseUrl": "./",
+    "declaration": true,
+    "esModuleInterop": true,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "icons/*": [
+        "src/components/atoms/icons/*"
+      ],
+      "libs/*": [
+        "src/libs/*"
+      ],
+      "Template/*": [
+        "src/components/Template/*"
+      ],
+      "Organism/*": [
+        "src/components/Organism/*"
+      ],
+      "Molecules/*": [
+        "src/components/Molecules/*"
+      ],
+      "Atoms/*": [
+        "src/components/Atoms/*"
+      ],
+      "Modal/*": [
+        "src/components/Modal/*"
+      ],
+      "CustomHooks": [
+        "src/components/CustomHooks"
+      ],
+      "ComponentSelectors": [
+        "src/components/Selectors"
+      ],
+      "constants/*": [
+        "src/constants/*"
+      ],
+      "libs": [
+        "src/libs"
+      ],
+      "img": [
+        "src/img"
+      ],
+      "testData": [
+        "src/testData"
+      ]
+    },
+    "noEmit": true,
     "plugins": [
       {
         "name": "next"
       }
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    ]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "app/lib/placeholder-data.ts",
-    "scripts/seed.js"
+  "exclude": [
+    "node_modules",
+    "src/**/*.stories.tsx"
   ],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "path-autocomplete.pathMappings": {
+    "@/*": [
+      "${folder}/ts/*"
+    ],
+    "icons/*": [
+      "${folder}/ts/components/atoms/icons/*"
+    ],
+    "libs/*": [
+      "${folder}/jsx/libs/*"
+    ],
+    "Template/*": [
+      "${folder}/jsx/components/Template/*"
+    ],
+    "Organism/*": [
+      "${folder}/jsx/components/Organism/*"
+    ],
+    "Molecules/*": [
+      "${folder}/jsx/components/Molecules/*"
+    ],
+    "Atoms/*": [
+      "${folder}/jsx/components/Atoms/*"
+    ],
+    "Modal/*": [
+      "${folder}/jsx/components/Modal/*"
+    ],
+    "CustomHooks/*": [
+      "${folder}/jsx/components/CustomHooks"
+    ],
+    "constants/*": [
+      "${folder}/jsx/constants/*"
+    ],
+    "ComponentSelectors/*": [
+      "${folder}/jsx/components/Selectors"
+    ],
+    "img/*": [
+      "${folder}/src/img/*"
+    ],
+    "testData/*": [
+      "${folder}/jsx/testData/*"
+    ]
+  },
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "prettier": true
+  }
 }

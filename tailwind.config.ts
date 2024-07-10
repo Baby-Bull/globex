@@ -1,10 +1,12 @@
 import type { Config } from 'tailwindcss';
+import { COLORS } from './src/constants/Colors';
 
 const config: Config = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -17,6 +19,7 @@ const config: Config = {
           500: '#0070F3',
           600: '#2F6FEB',
         },
+        // corporate: COLORS.corporate,
       },
     },
     keyframes: {
