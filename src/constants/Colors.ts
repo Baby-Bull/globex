@@ -7,6 +7,11 @@ import { Unbox } from "@/types/utilType";
 export const COLORS = {
   // コーポレートカラー
   corporate: '#002482',
+
+  gray40: '#848484',
+
+
+
   // 学習者カラー
   student: '#26b297',
   // 指導者カラー
@@ -75,7 +80,6 @@ export const COLORS = {
   // gray80Fade80: fade('#757575', 0.8),
   gray60: '#a3a3a3',
   gray50: '#868686',
-  gray40: '#cccccc',
   gray20: '#e0e0e0',
   gray30: '#c4c4c4',
   gray15: '#ebebeb',

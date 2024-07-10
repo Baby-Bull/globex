@@ -19,7 +19,10 @@ const config: Config = {
           500: '#0070F3',
           600: '#2F6FEB',
         },
-        // corporate: COLORS.corporate,
+        corporate: COLORS.corporate,
+        gray:{
+          40: COLORS.gray40
+        }
       },
     },
     keyframes: {
