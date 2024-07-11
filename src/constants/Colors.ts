@@ -9,6 +9,9 @@ export const COLORS = {
   corporate: '#002482',
 
   gray40: '#848484',
+  gray20: '#BDC0CD',
+
+  red40: '#FB7181',
 
 
 
@@ -80,7 +83,6 @@ export const COLORS = {
   // gray80Fade80: fade('#757575', 0.8),
   gray60: '#a3a3a3',
   gray50: '#868686',
-  gray20: '#e0e0e0',
   gray30: '#c4c4c4',
   gray15: '#ebebeb',
   gray10: '#fafafa',

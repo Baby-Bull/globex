@@ -1,9 +1,14 @@
 // These styles apply to every route in the application
-import '@/styles/global.css';
-import { Open_Sans } from 'next/font/google';
+import '@/styles/global.scss';
+import { Open_Sans, Inter } from 'next/font/google';
 
 //👇 Configure our font object
 const openSans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
@@ -14,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={openSans.className}>
+    <html lang="en" className={inter.className}>
       <body>{children}</body>
     </html>
   );
