@@ -12,15 +12,18 @@ import ErrorMessage from '@/components/atoms/ErrorMessage';
 import InputIcon from '@/components/atoms/InputIcon';
 import LoginUpperZone from '@/components/molecules/LoginUpperZone';
 import LoginOtherMethodZone from '@/components/molecules/LoginOtherMethodZone';
+import AccountTemplate from '@/components/templates/AccountTemplate';
 
 const SignInPage = () => {
   return (
     <div>
-      <div className="loginpage container justify-center grid mt-[100px]">
-        <LoginUpperZone
-          strongMessage={'Welcome back to Globex!'}
-          lightMessage={'Sign to continue'}
-        />
+      <AccountTemplate
+        strongMessage="Welcome back to Globex!"
+        lightMessage="Sign to continue"
+        leftMessage="Don't have a account?"
+        redirectMessage="Register"
+        buttonTitle="Login"
+      >
         <div className="relative input-area mt-10">
           <ErrorMessage message="Incorrect Password!" />
           <InputIcon
@@ -54,16 +57,7 @@ const SignInPage = () => {
             Remember Me
           </label>
         </div>
-        <div className="login-button mt-6">
-          <button className="text-white bg-corporate w-full h-[52px] text-center rounded-[5px] text-[18px]">
-            Login
-          </button>
-        </div>
-        <LoginOtherMethodZone
-          leftMessage="Don't have a account?"
-          redirectMessage="Register"
-        />
-      </div>
+      </AccountTemplate>
     </div>
   );
 };
