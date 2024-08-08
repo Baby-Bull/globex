@@ -5,7 +5,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const NextAuthProvoder = ({ children }: Props) => {
+const NextAuthProvider = ({ children }: Props) => {
   return (
     <SessionProvider
       // Re-fetch session every 60 minutes
@@ -18,4 +18,4 @@ const NextAuthProvoder = ({ children }: Props) => {
   );
 };
 
-export default NextAuthProvoder;
+export default NextAuthProvider;

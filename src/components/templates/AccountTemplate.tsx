@@ -6,7 +6,7 @@ type AccountTemplateProps = {
   children: React.ReactNode;
   strongMessage: string;
   lightMessage: string;
-  minorMessage: string;
+  // minorMessage?: string;
   leftMessage: string;
   redirectMessage: string;
   buttonTitle: string;
@@ -16,7 +16,7 @@ const AccountTemplate = ({
   children,
   strongMessage,
   lightMessage,
-  minorMessage,
+  // minorMessage,
   leftMessage,
   redirectMessage,
   buttonTitle,

@@ -3,6 +3,7 @@
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import OrLineSVG from '../atoms/icons/OrLineSVG';
+import { useSearchParams } from 'next/navigation';
 
 type ILoginOtherMethodZone = {
   leftMessage: string;
@@ -14,11 +15,11 @@ const LoginOtherMethodZone = ({
   redirectMessage,
 }: ILoginOtherMethodZone) => {
   const { data, status } = useSession();
-  console.log(data);
+  const searchParams = useSearchParams();
 
-  const handleLoginSocial = () => {
-    console.log('Button clicked');
-    signIn('google', { promt: 'login' });
+  const handleLoginSocial = async () => {
+    const callbackUrl = searchParams.get('callbackUrl') || '/en/';
+    await signIn('google', { promt: 'login', callbackUrl });
   };
 
   return (

@@ -1,7 +1,7 @@
 'use client';
 
 // These styles apply to every route in the application
-import NextAuthProvoder from '@/app/providers/NextAuthProvoder';
+import NextAuthProvider from '@/app/providers/NextAuthProvider';
 import '@/styles/global.scss';
 import { Open_Sans, Inter } from 'next/font/google';
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <NextAuthProvoder>{children}</NextAuthProvoder>
+        <NextAuthProvider>{children}</NextAuthProvider>
       </body>
     </html>
   );
